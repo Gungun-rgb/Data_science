@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Random Fact Generator</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            text-align: center;
+            padding: 50px;
+        }
+        #fact {
+            font-size: 24px;
+            margin: 20px 0;
+            padding: 20px;
+            background-color: #fff;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+        button {
+            padding: 10px 20px;
+            font-size: 16px;
+            cursor: pointer;
+            border: none;
+            border-radius: 5px;
+            background-color: #007BFF;
+            color: white;
+        }
+        button:hover {
+            background-color: #0056b3;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Random Fact Generator</h1>
+    <div id="fact">Click the button to generate a random fact!</div>
+    <button onclick="generateFact()">Generate Fact</button>
+
+    <script>
+        const facts = [
+            "Data science combines techniques from statistics, computer science, and domain knowledge.",
+            "The rise of big data has significantly increased the demand for data scientists.",
+            "Machine learning allows computers to learn from and make predictions based on data.",
+            "Effective data visualization helps communicate findings in a clear manner.",
+            "Common programming languages used in data science include Python, R, and SQL.",
+            "A significant portion of a data scientist's time is spent on data cleaning.",
+            "Data science is widely used for predictive analytics to forecast future outcomes.",
+            "Ethical considerations and data privacy are critical issues in data science.",
+            "Data science is applied across various industries to optimize processes.",
+            "The field of data science is constantly evolving, requiring continuous learning."
+        ];
+
+        function generateFact() {
+            const randomIndex = Math.floor(Math.random() * facts.length);
+            document.getElementById('fact').innerText = facts[randomIndex];
+        }
+    </script>
+
+</body>
+</html>
